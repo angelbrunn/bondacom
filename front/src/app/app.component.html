@@ -1,0 +1,31 @@
+<body>
+<!-- Header -->
+<header id="header">
+	<h1>{{ weather.name }}</h1>
+
+	<div>
+		<h2 >{{weather.tCurrent}} °C </h2>
+	</div>
+
+	<h4>Hum. {{weather.humidity}} %  {{weather.condition | translate }} </h4>
+
+    <div *ngFor='let day of days; let i = index;'>
+        <h3>{{ day.date }} </h3>
+        <p class="major">Maxima: {{ day.day.maxtemp_c }} °C </p>
+        <p class="major">Minima: {{ day.day.mintemp_c }} °C </p>
+	</div>
+	
+	<div class="contact">	
+			<ul class="icons">
+				<li><a href="https://stackoverflow.com/users/4304081/angel-brun" class="icon fa-stack-overflow"><span class="label">Twitter</span></a></li>
+				<li><a href="https://www.instagram.com/angelbrunn/" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+				<li><a href="https://github.com/angelbrunn" class="icon fa-github"><span class="label">GitHub</span></a></li>
+				<li><a href="https://www.linkedin.com/in/angelbrunn/" class="icon fa-linkedin-square"><span class="label">Email</span></a></li>
+			</ul>
+			<ul class="copyright">
+				<li>&copy; AGPB - Developer</li>
+			</ul>
+		</div>
+</header>
+</body>
+
